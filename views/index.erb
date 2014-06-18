@@ -1,0 +1,85 @@
+<!-- EMAILER -->
+<html>
+  <head>
+    <style>
+      body{
+        padding-left: 2em;
+        font-family: Georgia, "Times New Roman",
+              Times, serif;
+        color: purple;
+      }
+      form{
+      font-family: Helvetica, Geneva, Arial, SunSans-Regular, sans-serif;
+      color: blue;
+      }
+      p{
+      font-family: Helvetica, Geneva, Arial,
+              SunSans-Regular, sans-serif;
+              font-size: 25pt;
+              color: black;
+      }
+    </style>
+  </head>
+
+  <body>
+    <center> <p> Welcome to the Student Technology Collaborative </br>
+    We need some information from you to open up a ticket for you in our system.</p>  </center> </br> </br> </br>
+
+  <form>
+      First name: </br>
+      <input type='text' name='first' /> </br>
+      Last name:</br>
+      <input type='text' name='last' /> </br>
+      Your Email Address: </br>
+      <input type='email' name='from' /> </br>
+      Your netid: </br>
+      <input type='text' name='netid' /></br>
+      What kind of computer are you giving to us? </br>
+      If other, please include in problem and description. </br>
+        <select name='model'>
+          <option value="Mac">Mac</option>
+          <option value="Dell">Dell</option>
+          <option value="Acer">Acer</option>
+          <option value="Lenovo">Lenovo</option>
+          <option value="Asus">Asus</option>
+          <option value="Gateway">Mac</option>
+          <option value="HP">HP</option>
+          <option value="Sony">Sony</option>
+          <option value="Samsung">Samsung</option>
+          <option value="Toshiba">Toshiba</option>
+          <option value="Other">Other</option>
+        </select></br>
+      Cell phone number </br>
+      <input type='tel' name='cell' /></br>
+      Summer session program name:</br>
+      <input type='text' name='program' /> </br>
+      Room number:</br>
+      <input type='text' name='room' /> </br>
+      Operating System:</br>
+        <select name='os'>
+        <option value="OSX 10.6"> MAC: Snow Leapord</option>
+        <option value="OSX 10.7">MAC: Lion</option>
+        <option value="OSX 10.8">MAC: Mountain Lion</option>
+        <option value="OSX 10.9">MAC: Mavericks</option>
+        <option value="OSX 10.10">MAC: Yosemite</option>
+        <option value="Windows XP">PC: Windows XP</option>
+        <option value="Windows Vista">PC: Windows Vista</option>
+        <option value="Windows 7">PC: Windows 7</option>
+        <option value="Windows 8">PC: Windows 8</option>
+        <option value="Windows 8.1">PC: Windows 8.1</option>
+        <option value="Linux">PC: Linux </option>
+
+        </select>
+      </br>
+      Serial Number: </br>
+      <input type='text' name='serialnumber' /> </br></br>
+      A breif description of your problem: </br>
+      <textarea name='problem' cols=70 rows=5 /></textarea></br>
+      <input type='submit' value='submit' />
+    </form></br>
+    <p>
+        <%= success %> </br>
+
+    </p>
+</body>
+</html>
