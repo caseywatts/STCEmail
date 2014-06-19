@@ -46,12 +46,12 @@ The following is a description of the problem provided by the client:
 
 
 if timetosend == true
-  Pony.mail(:to => to, :from => from, :cc => from, :subject => subject, :body => body, :via => :smtp, :via_options => {
+  Pony.mail(:to => to, :from => "stuart.teal@yale.edu", :cc => from, :subject => subject, :body => body, :via => :smtp, :via_options => {
     :address              => 'smtp.gmail.com',
     :port                 => '587',
     :enable_starttls_auto => true,
-    :user_name            => 'stuartteal',
-    :password             => 'SBTxj2495',
+    :user_name            => 'STCEmailer',
+    :password             => 'studenttechnology',
     :authentication       => :plain, # :plain, :login, :cram_md5, no auth by default
     :domain               => "localhost.localdomain" # the HELO domain provided by the client to the server
   })
