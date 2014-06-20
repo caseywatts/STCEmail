@@ -15,7 +15,7 @@ timetosend = false
 get '/' do
   #get all the variables from the erb forms
   from = params["from"] #"stuartteal@gmail.com"#
-  to = "stuart.teal@yale.edu"#
+  to = "stuartteal@gmail.com" #dent.technology@yale.edu"#
   body = params["problem"] #"hello" #
   netid = params["netid"] #"sbt3" #
   model = params["model"]
@@ -27,6 +27,9 @@ get '/' do
   os = params["os"]
   serialnumber = params["serialnumber"]
   problem = params["problem"]
+  username = params["username"]
+  password = params["password"]
+
   #check if there's a valid from address. The form auto checks that it's an email. the if loop checks that it's not blank.
   if from.to_s == ""
     timetosend = false
@@ -46,15 +49,19 @@ The following is a description of the problem provided by the client:
 
 
 if timetosend == true
-  Pony.mail(:to => to, :from => "stuart.teal@yale.edu", :cc => from, :subject => subject, :body => body, :via => :smtp, :via_options => {
+  Pony.mail(:to => to, :from => from, :cc => from, :subject => subject,:reply_to => from, :sender => from, :body => body,
+    #:headers              => {"From:" => from},
+    :via => :smtp, :via_options => {
     :address              => 'smtp.gmail.com',
     :port                 => '587',
     :enable_starttls_auto => true,
-    :user_name            => 'STCEmailer',
-    :password             => 'studenttechnology',
+    :user_name            => username,
+    :password             => password,
     :authentication       => :plain, # :plain, :login, :cram_md5, no auth by default
     :domain               => "localhost.localdomain" # the HELO domain provided by the client to the server
-  })
+
+    }
+  )
   success = "Success!
   Your Email Was Sent"
 else
