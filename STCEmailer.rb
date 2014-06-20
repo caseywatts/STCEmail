@@ -15,7 +15,7 @@ timetosend = false
 get '/' do
   #get all the variables from the erb forms
   from = params["from"] #"stuartteal@gmail.com"#
-  to = "stuartteal@gmail.com" #dent.technology@yale.edu"#
+  to = "student.technology@yale.edu"#
   body = params["problem"] #"hello" #
   netid = params["netid"] #"sbt3" #
   model = params["model"]
