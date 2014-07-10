@@ -6,33 +6,40 @@
   <div class="panel-body">
     <div class="col-md-6">
       <label>
-        Your netid: 
-        <input type='text' name='netid' />
+        NetID 
+        <input type='text' class="form-control" placeholder="abc123" name='netid' />
       </label><br/>
       <label>
-        First name: 
-        <input type='text' name='first' />
+        First name 
+        <input type='text' class="form-control" placeholder="Firstname" name='first' />
       </label><br/>
       <label>
-        Last name:
-        <input type='text' name='last' />
+        Last name
+        <input type='text' class="form-control" placeholder="Lastname" name='last' />
       </label><br/>
       <label>
-        Your Email Address: 
-        <input type='email' name='from' />
-      </label><br/>
-<!--       <label>
-        Your Gmail Username: 
-        <input type='text' name='username' />
+        Non-Yale Email Address 
+        <input type='email' class="form-control" placeholder="first.last@gmail.com" name='nonyaleemail' />
       </label><br/>
       <label>
-        Your Gmail Password: 
-        <input type='password' name='password' />
-      </label><br/> -->
+        Cell Phone Number 
+        <input type='tel' class="form-control" placeholder="123-456-7890" name='cell' />
+      </label><br/>
+      <label>
+        Summer Session Program Name (if you have one)
+        <input type='text' class="form-control" placeholder="Summer Program X" name='program' /> 
+      </label><br/>
+      <label>
+        Room Number
+        <input type='text' class="form-control" placeholder="BK A11" name='room' /> 
+      </label><br/>
+    </div>
+    <div class="col-md-6">
       <label>
         What kind of computer are you giving to us?<br/>
-        If other, please include in problem and description. <br/>
-        <select name='model'>
+        (If other, please include in description.)<br/>
+        <select class="form-control" name='model'>
+          <option value=""></option>
           <option value="Mac">Mac</option>
           <option value="Dell">Dell</option>
           <option value="Acer">Acer</option>
@@ -47,42 +54,29 @@
         </select>
       </label><br/>
       <label>
-        Cell phone number 
-        <input type='tel' name='cell' />
-      </label><br/>
-    </div>
-    <div class="col-md-6">
-      <label>
-        Summer session program name:
-        <input type='text' name='program' /> 
-      </label><br/>
-      <label>
-        Room number:
-        <input type='text' name='room' /> 
-      </label><br/>
-      <label>
-        Operating System:
-        <select name='os'>
-          <option value="OSX 10.6"> MAC: Snow Leapord</option>
-          <option value="OSX 10.7">MAC: Lion</option>
-          <option value="OSX 10.8">MAC: Mountain Lion</option>
-          <option value="OSX 10.9">MAC: Mavericks</option>
-          <option value="OSX 10.10">MAC: Yosemite</option>
-          <option value="Windows XP">PC: Windows XP</option>
-          <option value="Windows Vista">PC: Windows Vista</option>
-          <option value="Windows 7">PC: Windows 7</option>
-          <option value="Windows 8">PC: Windows 8</option>
-          <option value="Windows 8.1">PC: Windows 8.1</option>
-          <option value="Linux">PC: Linux </option>
+        Operating System
+        <select class="form-control" name='os'>
+          <option value=""></option>
+          <option value="OSX 10.6"> MAC Snow Leapord</option>
+          <option value="OSX 10.7">MAC Lion</option>
+          <option value="OSX 10.8">MAC Mountain Lion</option>
+          <option value="OSX 10.9">MAC Mavericks</option>
+          <option value="OSX 10.10">MAC Yosemite</option>
+          <option value="Windows XP">PC Windows XP</option>
+          <option value="Windows Vista">PC Windows Vista</option>
+          <option value="Windows 7">PC Windows 7</option>
+          <option value="Windows 8">PC Windows 8</option>
+          <option value="Windows 8.1">PC Windows 8.1</option>
+          <option value="Linux">PC Linux </option>
         </select>
       </label><br/>
       <label>
-        Serial Number: 
-        <input type='text' name='serialnumber' /> 
+        Serial Number 
+        <input type='text' class="form-control" placeholder="abc123abc123" name='serialnumber' /> 
       </label><br/>
       <label>
-        A brief description of your problem: 
-        <textarea name='problem' cols=70 rows=5 /></textarea>
+        Description of the issues you're having
+        <textarea class="form-control" name='problem' cols=70 rows=5 /></textarea>
       </label><br/>
     </div>
         </div>
