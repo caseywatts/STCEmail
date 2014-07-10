@@ -3,85 +3,88 @@
 
 <form role="form" action="confirmation" method="post">
   <div class="panel panel-default">
-  <div class="panel-body">
-    <div class="col-md-6">
-      <label>
-        NetID 
-        <input type='text' class="form-control" placeholder="abc123" name='netid' />
-      </label><br/>
-      <label>
-        First name 
-        <input type='text' class="form-control" placeholder="Firstname" name='first' />
-      </label><br/>
-      <label>
-        Last name
-        <input type='text' class="form-control" placeholder="Lastname" name='last' />
-      </label><br/>
-      <label>
-        Non-Yale Email Address 
-        <input type='email' class="form-control" placeholder="first.last@gmail.com" name='nonyaleemail' />
-      </label><br/>
-      <label>
-        Cell Phone Number 
-        <input type='tel' class="form-control" placeholder="123-456-7890" name='cell' />
-      </label><br/>
-      <label>
-        Summer Session Program Name (if you have one)
-        <input type='text' class="form-control" placeholder="Summer Program X" name='program' /> 
-      </label><br/>
-      <label>
-        Room Number
-        <input type='text' class="form-control" placeholder="BK A11" name='room' /> 
-      </label><br/>
+    <div class="panel-heading">
+      <h3 class="panel-title">Open A Help Ticket</h3>
     </div>
-    <div class="col-md-6">
-      <label>
-        What kind of computer are you giving to us?<br/>
-        (If other, please include in description.)<br/>
-        <select class="form-control" name='model'>
-          <option value=""></option>
-          <option value="Mac">Mac</option>
-          <option value="Dell">Dell</option>
-          <option value="Acer">Acer</option>
-          <option value="Lenovo">Lenovo</option>
-          <option value="Asus">Asus</option>
-          <option value="Gateway">Mac</option>
-          <option value="HP">HP</option>
-          <option value="Sony">Sony</option>
-          <option value="Samsung">Samsung</option>
-          <option value="Toshiba">Toshiba</option>
-          <option value="Other">Other</option>
-        </select>
-      </label><br/>
-      <label>
-        Operating System
-        <select class="form-control" name='os'>
-          <option value=""></option>
-          <option value="OSX 10.6"> MAC Snow Leapord</option>
-          <option value="OSX 10.7">MAC Lion</option>
-          <option value="OSX 10.8">MAC Mountain Lion</option>
-          <option value="OSX 10.9">MAC Mavericks</option>
-          <option value="OSX 10.10">MAC Yosemite</option>
-          <option value="Windows XP">PC Windows XP</option>
-          <option value="Windows Vista">PC Windows Vista</option>
-          <option value="Windows 7">PC Windows 7</option>
-          <option value="Windows 8">PC Windows 8</option>
-          <option value="Windows 8.1">PC Windows 8.1</option>
-          <option value="Linux">PC Linux </option>
-        </select>
-      </label><br/>
-      <label>
-        Serial Number 
-        <input type='text' class="form-control" placeholder="abc123abc123" name='serialnumber' /> 
-      </label><br/>
-      <label>
-        Description of the issues you're having
-        <textarea class="form-control" name='problem' cols=70 rows=5 /></textarea>
-      </label><br/>
+    <div class="panel-body">
+      <div class="col-md-6">
+        <label>
+          NetID 
+          <input type='text' class="form-control" placeholder="abc123" name='netid' />
+        </label><br/>
+        <label>
+          First name 
+          <input type='text' class="form-control" placeholder="Firstname" name='first' />
+        </label><br/>
+        <label>
+          Last name
+          <input type='text' class="form-control" placeholder="Lastname" name='last' />
+        </label><br/>
+        <label>
+          Non-Yale Email Address 
+          <input type='email' class="form-control" placeholder="first.last@gmail.com" name='nonyaleemail' />
+        </label><br/>
+        <label>
+          Cell Phone Number 
+          <input type='tel' class="form-control" placeholder="123-456-7890" name='cell' />
+        </label><br/>
+        <label>
+          Summer Session Program Name (if you have one)
+          <input type='text' class="form-control" placeholder="Summer Program X" name='program' /> 
+        </label><br/>
+        <label>
+          Room Number
+          <input type='text' class="form-control" placeholder="BK A11" name='room' /> 
+        </label><br/>
+      </div>
+      <div class="col-md-6">
+        <label>
+          What kind of computer are you giving to us?<br/>
+          (If other, please include in description.)<br/>
+          <select class="form-control" name='model'>
+            <option value=""></option>
+            <option value="Mac">Mac</option>
+            <option value="Dell">Dell</option>
+            <option value="Acer">Acer</option>
+            <option value="Lenovo">Lenovo</option>
+            <option value="Asus">Asus</option>
+            <option value="Gateway">Mac</option>
+            <option value="HP">HP</option>
+            <option value="Sony">Sony</option>
+            <option value="Samsung">Samsung</option>
+            <option value="Toshiba">Toshiba</option>
+            <option value="Other">Other</option>
+          </select>
+        </label><br/>
+        <label>
+          Operating System
+          <select class="form-control" name='os'>
+            <option value=""></option>
+            <option value="OSX 10.6"> MAC Snow Leapord</option>
+            <option value="OSX 10.7">MAC Lion</option>
+            <option value="OSX 10.8">MAC Mountain Lion</option>
+            <option value="OSX 10.9">MAC Mavericks</option>
+            <option value="OSX 10.10">MAC Yosemite</option>
+            <option value="Windows XP">PC Windows XP</option>
+            <option value="Windows Vista">PC Windows Vista</option>
+            <option value="Windows 7">PC Windows 7</option>
+            <option value="Windows 8">PC Windows 8</option>
+            <option value="Windows 8.1">PC Windows 8.1</option>
+            <option value="Linux">PC Linux </option>
+          </select>
+        </label><br/>
+        <label>
+          Serial Number 
+          <input type='text' class="form-control" placeholder="abc123abc123" name='serialnumber' /> 
+        </label><br/>
+        <label>
+          Description of the issues you're having
+          <textarea class="form-control" name='problem' cols=70 rows=5 /></textarea>
+        </label><br/>
+      </div>
     </div>
-        </div>
-  </div>
-  <div class="col-md-12">
-    <input class="btn btn-primary" type='submit' value='submit' />
+    <div class="panel-footer">
+      <input class="btn btn-primary btn-lg" type='submit' value='Open Ticket' />
+    </div>
   </div>
 </form>
