@@ -15,5 +15,11 @@
           color: black;
   }*/
   body{
-    background-color:#E5F0FF;
+    /*background adapted from http://lea.verou.me/css3patterns/#stairs*/
+    background: 
+        linear-gradient(63deg, #E5F0FF 23%, transparent 23%) 7px 0, 
+        linear-gradient(63deg, transparent 74%, #E5F0FF 78%), 
+        linear-gradient(63deg, transparent 34%, #E5F0FF 38%, #E5F0FF 58%, transparent 62%), 
+        #F5F0FF;
+        background-size: 16px 48px;
   }
