@@ -17,9 +17,19 @@ require "sinatra/reloader" if development?
     #requires params[:netid] to work, others are optional
     ServiceNow::Configuration.configure(:sn_url => 'https://yaletest.service-now.com', :sn_username => ENV['SN_USERNAME'], :sn_password => ENV['SN_PASSWORD'])
     inc = ServiceNow::Incident.new
-    inc.short_description = "report from iOS wifi-reporter"
-    inc.description = "netid: #{params[:netid]}\nname: #{params[:name]}\nlocation: #{params[:location]}\nbandwidth: #{params[:avg_bandwidth]}\ntrial1: #{params[:trial1]}\ntrial2: #{params[:trial2]}\ntrial3: #{params[:trial3]}\ncomment: #{params[:comments]}\nmac: #{params[:mac]}"
     inc.caller_id = ServiceNow::User.find(params[:netid]).sys_id
+    inc.short_description = "Report From STCEmailApp"
+    inc.description = %{
+      Name: #{params[:first]} #{params[:last]}
+      Email: #{params[:from]}
+      Model: #{params[:model]}
+      OS: #{params[:os]}
+      Serial Number: #{params[:serialnumber]}
+      Cell: #{params[:cell]}
+      Program Name: #{params[:program]}
+      Room Number: #{params[:room]}
+      Description of Issue: #{params[:problem]}
+    }
     inc.save!
   end
 
