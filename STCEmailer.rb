@@ -37,7 +37,8 @@ require 'sinatra/reloader' if development?
     # Anyone can see this page, no filter
     # @netid = session[:cas_user]
     # erb :index
-    "Splash Page!"
+    # "Splash Page!"
+    erb :welcome
   end
 
   get '/newticket' do
