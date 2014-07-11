@@ -3,7 +3,7 @@ Bundler.require
 require_relative 'lib/cas_helpers'
 require 'sinatra/reloader' if development?
 
-  use Rack::Session::Cookie, :secret => '39pg0kjcareuh90' #using session cookies in production with CAS is NOT recommended
+  use Rack::Session::Cookie, :secret => ENV['cookiesecret'] #using session cookies in production with CAS is NOT recommended
 
   helpers CasHelpers
 
