@@ -1,6 +1,15 @@
 require 'bundler'
 Bundler.require
-require "sinatra/reloader" if development?
+require_relative 'lib/cas_helpers'
+require 'sinatra/reloader' if development?
+
+  use Rack::Session::Cookie, :secret => '39pg0kjcareuh90' #using session cookies in production with CAS is NOT recommended
+
+  helpers CasHelpers
+
+  before do
+    process_cas_login(request, session)
+  end
 
   def create_incident(params)
     #requires params[:netid] to work, others are optional
@@ -25,10 +34,20 @@ require "sinatra/reloader" if development?
   end
 
   get '/' do
+    # Anyone can see this page, no filter
+    # @netid = session[:cas_user]
+    # erb :index
+    "Splash Page!"
+  end
+
+  get '/newticket' do
+    require_authorization(request, session) unless logged_in?(request, session)
+    @netid = session[:cas_user]
     erb :index
   end
 
   post '/confirmation' do
+    require_authorization(request, session) unless logged_in?(request, session)
     # Hopefully after the incident is created some data is returned and we can display that?
     # @inc = create_incident(params)
     @inc = 'an incident'
