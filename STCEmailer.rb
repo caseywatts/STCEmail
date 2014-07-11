@@ -12,7 +12,7 @@ require 'sinatra/reloader' if development?
   end
 
   def create_incident(params)
-    ServiceNow::Configuration.configure(:sn_url => 'https://yaletest.service-now.com', :sn_username => ENV['SN_USERNAME'], :sn_password => ENV['SN_PASSWORD'])
+    ServiceNow::Configuration.configure(:sn_url => ENV['SN_INSTANCE'], :sn_username => ENV['SN_USERNAME'], :sn_password => ENV['SN_PASSWORD'])
     inc = ServiceNow::Incident.new
     # the `params[:netid]` isn't as secure as the `session[:cas_user]` that comes from rubycas
     inc.caller_id = ServiceNow::User.find(session[:cas_user]).sys_id
