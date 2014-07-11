@@ -35,9 +35,6 @@ require 'sinatra/reloader' if development?
 
   get '/' do
     # Anyone can see this page, no filter
-    # @netid = session[:cas_user]
-    # erb :index
-    # "Splash Page!"
     erb :welcome
   end
 
